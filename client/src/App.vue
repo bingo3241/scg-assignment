@@ -2,7 +2,6 @@
   <div id="app">
     <div id="nav">
       <b-navbar variant="info" fixed='top'>
-         <b-navbar-brand to="/">Home</b-navbar-brand>
         <b-navbar-brand to="/sequence">Sequence</b-navbar-brand>
         <b-navbar-brand to="/equation">Equation</b-navbar-brand>
         <b-navbar-brand to="/maps">Maps</b-navbar-brand>

@@ -1,5 +1,7 @@
 <template>
     <div>
+        <h1><strong>SATSAWAT SUTTAWUTTIWONG</strong></h1>
+        <br>
         <p><strong><u>EDUCATION</u></strong></p>
         <p><strong>2016 &ndash; Present </strong> <strong>CHULALONGKORN UNIVERSITY, BANGKOK, THAILAND </strong>CGPA : 3.26</p>
         <p>Bachelor of Engineering, Major in Information and Communication Engineering</p>
