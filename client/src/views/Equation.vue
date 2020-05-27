@@ -11,8 +11,8 @@
             <b-form-input v-model="aplusb" type="number"></b-form-input>
             </b-input-group>
 
-            <b-input-group prepend="A - C = ">
-            <b-form-input v-model="aminusc" type="number"></b-form-input>
+            <b-input-group prepend="A + C = ">
+            <b-form-input v-model="aplusc" type="number"></b-form-input>
             </b-input-group>
             <br>
             <b-button @click="getResult" variant="primary">Solve!</b-button>
@@ -32,9 +32,9 @@ import EquationService from '../services/EquationService';
 export default {
     data() {
         return {
-            "a": '',
-            "aplusb": '',
-            "aminusc": '',
+            "a": "21",
+            "aplusb": '23',
+            "aplusc": '-21',
             "b" : '',
             "c" : ''
         }
@@ -46,8 +46,8 @@ export default {
         if (localStorage.aplusb) {
         this.aplusb = localStorage.aplusb;
         }
-        if (localStorage.aminusc) {
-        this.aminusc = localStorage.aminusc;
+        if (localStorage.aplusc) {
+        this.aplusc = localStorage.aplusc;
         }
         if (localStorage.b) {
         this.b = localStorage.b;
@@ -58,7 +58,7 @@ export default {
     },
     methods: {
         async getResult() {
-            await EquationService.solveEquation(this.a, this.aplusb, this.aminusc)
+            await EquationService.solveEquation(this.a, this.aplusb, this.aplusc)
                 .then( res => {
                     console.log(res)
                     this.b = res.b
@@ -69,14 +69,9 @@ export default {
         persist() {
             localStorage.a = this.a;
             localStorage.aplusb = this.aplusb;
-            localStorage.aminusc = this.aminusc;
+            localStorage.aplusc = this.aplusc;
             localStorage.b = this.b;
             localStorage.c = this.c;
-        }
-    },
-    watch: {
-        name(newName) {
-        localStorage.name = newName;
         }
     }
 }

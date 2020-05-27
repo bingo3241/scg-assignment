@@ -26,8 +26,6 @@ async function getRoute() {
         console.log('cache used')
         return routeCache
     }
-    
-    
 }
 
 module.exports = {

@@ -19,7 +19,7 @@ app.get('/', (req, res) => {
 
 app.get('/equation', (req, res) => {
   // console.log('equation')
-  result = equation.solve(req.query.a, req.query.aplusb, req.query.aminusc)
+  result = equation.solve(req.query.a, req.query.aplusb, req.query.aplusc)
   res.send(result)
 });
 

@@ -1,12 +1,12 @@
 import axios from "axios"
 
 export default {
-  async solveEquation(a, aplusb, aminusc) {
+  async solveEquation(a, aplusb, aplusc) {
     let res = await axios.get("http://localhost:8000/equation", {
       params: {
         a: a,
         aplusb: aplusb,
-        aminusc: aminusc
+        aplusc: aplusc
       }
     })
     console.log(res.data)
